@@ -63,8 +63,8 @@ def bidirectional_ais(draw_exact_initial_sample,
     reverse_results = z_r, xs_r, weights_r, ratios_r
 
     # process results into estimates of log(Z_T / Z_1)
-    stoch_upper_bound = np.log(z_f)
-    stoch_lower_bound = np.log(1/z_r)
+    stoch_lower_bound = np.log(z_f)
+    stoch_upper_bound = np.log(1/z_r)
 
     return stoch_upper_bound,stoch_lower_bound,forward_results,reverse_results
 
